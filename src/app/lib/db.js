@@ -3,8 +3,8 @@ import { Pool } from 'pg';
 const pool = new Pool({
   user: process.env.POSTGRES_USER,
   host: process.env.POSTGRES_HOST,
-  database: POSTGRES_DB,
-  password:POSTGRES_PASSWORD,
+  database: process.env.POSTGRES_DB,
+  password:process.env.POSTGRES_PASSWORD,
   port: 5432,
 });
 
