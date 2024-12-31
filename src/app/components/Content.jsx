@@ -1,8 +1,9 @@
 'use client';
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCertificate, faCheck, faSmile, faUserSecret, faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faSmile, faUserSecret, faUserTie } from '@fortawesome/free-solid-svg-icons';
 
 const companies = [
   { id: 1, name: 'Oracle', logoUrl: 'oracle.png' },
@@ -94,10 +95,10 @@ function Content() {
                     <li key={director.id} className="flex items-center space-x-3">
                       {/* Director Avatar */}
                       <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
-                        <span className="text-white text-lg">{director.director_name[0]}</span>
+                        <span className="text-white text-lg">{director.name[0]}</span>
                       </div>
                       {/* Director Name */}
-                      <span className="text-lg text-gray-700">{director.director_name}</span>
+                      <span className="text-lg text-gray-700">{director.name}</span>
                     </li>
                   ))}
                 </ul>
